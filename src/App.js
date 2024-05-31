@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import StudentForm from './components/StudentForm';
+import StudentCard from './components/StudentCard';
+import  './App.css';
 
-function App() {
+const App = () => {
+  const [students, setStudents] = useState([]);
+
+  const addStudent = (student) => {
+    setStudents([...students, student]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>Registro de Estudiantes</h1>
+      <StudentForm addStudent={addStudent} />
+      <div className="student-list">
+        {students.map((student, index) => (
+          <StudentCard key={index} student={student} />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

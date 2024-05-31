@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+.app {
+  text-align: center;
+  margin-top: 50px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.student-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.student-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: left;
+}
+
+.student-card h3 {
+  margin-top: 0;
+}
